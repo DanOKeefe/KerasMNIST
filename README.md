@@ -7,4 +7,4 @@ CNN accuracy ~ 99.3%
 
 FNN accuracy ~ 98.1%
 
-https://imgur.com/a/hsKCq
+![CNN accuracy](https://imgur.com/a/hsKCq)
