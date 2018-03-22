@@ -55,14 +55,13 @@ model %>% compile(
   metric = c('accuracy')
 )
 
-#dim(x_train)
+
 # reshape x_train and x_test to proper dimension
 x_train <- array(x_train, dim = c(60000, 28, 28, 1))
 x_test <- array(x_test, dim = c(10000, 28, 28, 1))
-#dim(x_train)
 
+# train, and use 10% of training set for validation
 
-#?fit
 history <- model %>% fit(
   x = x_train,
   y = y_train,
