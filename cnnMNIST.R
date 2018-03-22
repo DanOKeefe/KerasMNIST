@@ -55,7 +55,6 @@ model %>% compile(
   metric = c('accuracy')
 )
 
-
 # reshape x_train and x_test to proper dimension
 x_train <- array(x_train, dim = c(60000, 28, 28, 1))
 x_test <- array(x_test, dim = c(10000, 28, 28, 1))
