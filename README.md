@@ -7,6 +7,6 @@ CNN accuracy ~ 99.3%
 
 FNN accuracy ~ 98.1%
 
-Charts of loss function output and validation accuracy after each epoch during training:
+Charts of loss function output and validation accuracy after each epoch during training of the CNN:
 
 ![CNN accuracy](https://github.com/DanOKeefe/KerasMNIST/blob/master/MNISTaccuracyCNN.png)
