@@ -29,19 +29,21 @@ y_test <- to_categorical(y_test, 10)
 
 model <- keras_model_sequential() %>%
   
-  # 2 Convolutional and pooling layers
+  # 2 Convolutional, activation, and pooling layers
   
   layer_conv_2d(filters = 32, kernel_size = c(5,5), padding = 'same', input_shape = c(28,28,1), activation = 'relu') %>%
   layer_max_pooling_2d(pool_size = c(2,2)) %>%
   layer_conv_2d(filters = 64, kernel_size = c(5,5), padding = 'same', activation = 'relu') %>%
   layer_max_pooling_2d(pool_size = c(2,2)) %>%
   
-  # forward feed part
+  # unrolled to fully connected layer
   
   layer_flatten() %>%
   layer_dense(units = 1024) %>%
   layer_dropout(0.4) %>%
   layer_activation('relu') %>%
+
+  # softmax output layer
 
   layer_dense(units = 10, activation = 'softmax') # 10 outputs
 
