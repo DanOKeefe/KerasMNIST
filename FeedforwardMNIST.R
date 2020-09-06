@@ -1,9 +1,4 @@
-#install.packages('keras')
 library(keras)
-
-install_keras()
-
-?dataset_mnist # 60,000 28x28 grayscale images of the 10 digits, with test set of 10,000 images.
 
 mnist <- dataset_mnist()
 x_train <- mnist$train$x
